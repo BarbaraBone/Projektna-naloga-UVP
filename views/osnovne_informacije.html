@@ -1,0 +1,28 @@
+%rebase('base.tpl')
+ <h1 class="title is-1">Tvoje izbrano število je {{izbira.stevilo}}</h1>
+
+ {{izbira.vrsta()}} <br>
+ {{izbira.absolutna_vrednost()}} <br>
+ {{izbira.pozitivnost()}} <br>
+ {{izbira.sodost()}} <br>
+ {{izbira.predhodnik_naslednik()}} <br>
+ {{izbira.je_prastevilo()}} <br>
+ {{izbira.delitelji()}} <br>
+ {{izbira.prastevilski_razcep()}} <br>
+ {{izbira.rimski_zapis()}} <br>
+
+ {{izbira.kompleksni_imaginarni_del()}} <br>
+ {{izbira.cisto_stevilo()}} <br>
+
+%if izbira.vrsta() == 'To je decimalno število.':
+   Zapis z ulomkom izgleda tako: {{izbira.ulomek()}} <br>
+   Celi del števila, decimalni del: {{izbira.celi_decimalni_del()}} <br>
+%end 
+
+ <form action="/" method="GET">
+    <input class="button is-light" type="submit" value="Nazaj na prvo stran"> 
+ </form>
+
+ <form action='/razlaga/' method='GET'>
+    <input class="button is-success" type="submit" value="Ne razumeš nekaterih besed?">
+ </form>

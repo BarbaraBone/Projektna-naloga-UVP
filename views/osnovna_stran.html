@@ -1,0 +1,38 @@
+%rebase('base.tpl')
+  <h1 class="title is-1">Spoznaj števila</h1>
+
+  <section class="section">Tukaj je program za predmet Uvod v programiranje v prvem letniku pedagoške
+    matematike na FMF, s katerim lahko spoznavamo števila.</section>
+  
+  <section class="section">Število je abstrakten matematični objekt, ki izraža količino ali veliksot nečesa. 
+        Lahko ga zapišemo s številko <it>45</it> ali pa z besedo <it>petinštirideset</it>.
+        Če v kvadatek vpišeš število s številko, lahko dobiš nekaj informacij o tem številu.</section>
+
+  <section class="section">Ker za izvajanje stvari uporabljam Python nekaj opozoril, kako zapisati številke:
+    <ul>
+      <li>Čeprav v slovenščini uporabljamo decimalno vejico, Python za decimalno vejico uporablja decimalno piko,
+        ki je navadna pika na tipkovnici. </li>
+      <li>Za kompleksna števila smo večinoma navajeni, da imaginarno enarno enoto <span>&#8730;</span> -1 označimo z <it>i</it>. Python pa 
+        imaginarno enoto označuje z <b>j</b>, zato pri vpisu uporabi <it>j</it>.</li>
+      <li>Število lahko vpišeš v okence kar s številčno tipkovnico.</li>
+    </ul> 
+  </section>
+
+  <form action="/informacije/" method="POST">
+ 
+    Število : <input type="text" value="stevilo" name='stevilo'>
+    <input class="button is-light" type="submit" value="Informacije o številu">
+
+  </form>
+
+  <form action="/razlaga/" method="GET">
+    Katere lasnosti lahko izveš : <input class="button is-success" type="submit" value="Razlaga">
+  </form>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        2019, Barbara Bone, študentka pedagoške matematike, FMF
+      </p>
+    </div>
+  </footer>
